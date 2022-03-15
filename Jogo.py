@@ -40,10 +40,10 @@ class Jogo():
             else:
                 print(f"{c.nome} ficou em {self.jogadores.index(c) + 1}")
 
-    def segunda_rodada(self,x):
+    def segunda_rodada(self,rodadas):
         for c in self.jogadores:
             c.limpar_pontos()
-        for c in range(x):
+        for c in range(rodadas):
             for c in self.jogadores:
                 if not c.paredao:
                     pontos = int(input(f"Digite os pontos do jogador {c.nome}: "))
